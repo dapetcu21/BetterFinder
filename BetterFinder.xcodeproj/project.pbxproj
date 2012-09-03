@@ -1,0 +1,298 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C19E052115F4F72B00BF5DAD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19E052015F4F72B00BF5DAD /* Cocoa.framework */; };
+		C19E052B15F4F72B00BF5DAD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C19E052915F4F72B00BF5DAD /* InfoPlist.strings */; };
+		C19E052D15F4F72B00BF5DAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C19E052C15F4F72B00BF5DAD /* main.m */; };
+		C19E053115F4F72B00BF5DAD /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C19E052F15F4F72B00BF5DAD /* Credits.rtf */; };
+		C19E053415F4F72B00BF5DAD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C19E053315F4F72B00BF5DAD /* AppDelegate.m */; };
+		C19E053715F4F72B00BF5DAD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19E053515F4F72B00BF5DAD /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C19E051C15F4F72B00BF5DAD /* BetterFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C19E052015F4F72B00BF5DAD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		C19E052315F4F72B00BF5DAD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		C19E052415F4F72B00BF5DAD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C19E052515F4F72B00BF5DAD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C19E052815F4F72B00BF5DAD /* BetterFinder-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BetterFinder-Info.plist"; sourceTree = "<group>"; };
+		C19E052A15F4F72B00BF5DAD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C19E052C15F4F72B00BF5DAD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C19E052E15F4F72B00BF5DAD /* BetterFinder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BetterFinder-Prefix.pch"; sourceTree = "<group>"; };
+		C19E053015F4F72B00BF5DAD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		C19E053215F4F72B00BF5DAD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C19E053315F4F72B00BF5DAD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C19E053615F4F72B00BF5DAD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C19E051915F4F72B00BF5DAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C19E052115F4F72B00BF5DAD /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C19E051115F4F72B00BF5DAD = {
+			isa = PBXGroup;
+			children = (
+				C19E052615F4F72B00BF5DAD /* BetterFinder */,
+				C19E051F15F4F72B00BF5DAD /* Frameworks */,
+				C19E051D15F4F72B00BF5DAD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C19E051D15F4F72B00BF5DAD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C19E051C15F4F72B00BF5DAD /* BetterFinder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C19E051F15F4F72B00BF5DAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C19E052015F4F72B00BF5DAD /* Cocoa.framework */,
+				C19E052215F4F72B00BF5DAD /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C19E052215F4F72B00BF5DAD /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C19E052315F4F72B00BF5DAD /* AppKit.framework */,
+				C19E052415F4F72B00BF5DAD /* CoreData.framework */,
+				C19E052515F4F72B00BF5DAD /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		C19E052615F4F72B00BF5DAD /* BetterFinder */ = {
+			isa = PBXGroup;
+			children = (
+				C19E053215F4F72B00BF5DAD /* AppDelegate.h */,
+				C19E053315F4F72B00BF5DAD /* AppDelegate.m */,
+				C19E053515F4F72B00BF5DAD /* MainMenu.xib */,
+				C19E052715F4F72B00BF5DAD /* Supporting Files */,
+			);
+			path = BetterFinder;
+			sourceTree = "<group>";
+		};
+		C19E052715F4F72B00BF5DAD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C19E052815F4F72B00BF5DAD /* BetterFinder-Info.plist */,
+				C19E052915F4F72B00BF5DAD /* InfoPlist.strings */,
+				C19E052C15F4F72B00BF5DAD /* main.m */,
+				C19E052E15F4F72B00BF5DAD /* BetterFinder-Prefix.pch */,
+				C19E052F15F4F72B00BF5DAD /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C19E051B15F4F72B00BF5DAD /* BetterFinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C19E053A15F4F72B00BF5DAD /* Build configuration list for PBXNativeTarget "BetterFinder" */;
+			buildPhases = (
+				C19E051815F4F72B00BF5DAD /* Sources */,
+				C19E051915F4F72B00BF5DAD /* Frameworks */,
+				C19E051A15F4F72B00BF5DAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BetterFinder;
+			productName = BetterFinder;
+			productReference = C19E051C15F4F72B00BF5DAD /* BetterFinder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C19E051315F4F72B00BF5DAD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Marius Petcu";
+			};
+			buildConfigurationList = C19E051615F4F72B00BF5DAD /* Build configuration list for PBXProject "BetterFinder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C19E051115F4F72B00BF5DAD;
+			productRefGroup = C19E051D15F4F72B00BF5DAD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C19E051B15F4F72B00BF5DAD /* BetterFinder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C19E051A15F4F72B00BF5DAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C19E052B15F4F72B00BF5DAD /* InfoPlist.strings in Resources */,
+				C19E053115F4F72B00BF5DAD /* Credits.rtf in Resources */,
+				C19E053715F4F72B00BF5DAD /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C19E051815F4F72B00BF5DAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C19E052D15F4F72B00BF5DAD /* main.m in Sources */,
+				C19E053415F4F72B00BF5DAD /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C19E052915F4F72B00BF5DAD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C19E052A15F4F72B00BF5DAD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C19E052F15F4F72B00BF5DAD /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C19E053015F4F72B00BF5DAD /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		C19E053515F4F72B00BF5DAD /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C19E053615F4F72B00BF5DAD /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C19E053815F4F72B00BF5DAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C19E053915F4F72B00BF5DAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C19E053B15F4F72B00BF5DAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BetterFinder/BetterFinder-Prefix.pch";
+				INFOPLIST_FILE = "BetterFinder/BetterFinder-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C19E053C15F4F72B00BF5DAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BetterFinder/BetterFinder-Prefix.pch";
+				INFOPLIST_FILE = "BetterFinder/BetterFinder-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C19E051615F4F72B00BF5DAD /* Build configuration list for PBXProject "BetterFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C19E053815F4F72B00BF5DAD /* Debug */,
+				C19E053915F4F72B00BF5DAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C19E053A15F4F72B00BF5DAD /* Build configuration list for PBXNativeTarget "BetterFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C19E053B15F4F72B00BF5DAD /* Debug */,
+				C19E053C15F4F72B00BF5DAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C19E051315F4F72B00BF5DAD /* Project object */;
+}
