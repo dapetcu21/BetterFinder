@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Disabled</key>
+	<false/>
+	<key>GroupName</key>
+	<string>wheel</string>
+	<key>KeepAlive</key>
+	<true/>
+	<key>Label</key>
+	<string>com.dapetcu21.BetterFinderDaemon</string>
+	<key>OnDemand</key>
+	<false/>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>StartOnMount</key>
+	<false/>
+	<key>UserName</key>
+	<string>root</string>
+</dict>
+</plist>

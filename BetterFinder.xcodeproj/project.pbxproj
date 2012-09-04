@@ -10,10 +10,68 @@
 		C19E052115F4F72B00BF5DAD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19E052015F4F72B00BF5DAD /* Cocoa.framework */; };
 		C19E052B15F4F72B00BF5DAD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C19E052915F4F72B00BF5DAD /* InfoPlist.strings */; };
 		C19E052D15F4F72B00BF5DAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C19E052C15F4F72B00BF5DAD /* main.m */; };
-		C19E053115F4F72B00BF5DAD /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C19E052F15F4F72B00BF5DAD /* Credits.rtf */; };
-		C19E053415F4F72B00BF5DAD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C19E053315F4F72B00BF5DAD /* AppDelegate.m */; };
-		C19E053715F4F72B00BF5DAD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19E053515F4F72B00BF5DAD /* MainMenu.xib */; };
+		C19E053E15F4F74F00BF5DAD /* mach_inject_bundle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19E053D15F4F74F00BF5DAD /* mach_inject_bundle.framework */; };
+		C19E054015F4F77800BF5DAD /* mach_inject_bundle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C19E053D15F4F74F00BF5DAD /* mach_inject_bundle.framework */; };
+		C19E055515F5065800BF5DAD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19E052015F4F72B00BF5DAD /* Cocoa.framework */; };
+		C19E055B15F5065800BF5DAD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C19E055915F5065800BF5DAD /* InfoPlist.strings */; };
+		C19E056015F506E900BF5DAD /* BetterFinder-injected.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C19E055415F5065800BF5DAD /* BetterFinder-injected.bundle */; };
+		C19E056415F507AE00BF5DAD /* BetterFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = C19E056315F507AE00BF5DAD /* BetterFinder.m */; };
+		C19E057615F528DB00BF5DAD /* Installer.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19E057515F528DB00BF5DAD /* Installer.xib */; };
+		C1B7753A15F57A5F00ACDF06 /* com.dapetcu21.BetterFinderDaemon in CopyFiles */ = {isa = PBXBuildFile; fileRef = C1C1CFFF15F576ED0053040B /* com.dapetcu21.BetterFinderDaemon */; };
+		C1B7753E15F57C4E00ACDF06 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1B7753D15F57C4E00ACDF06 /* ServiceManagement.framework */; };
+		C1C1CFF015F5587B0053040B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C1C1CFEF15F5587B0053040B /* AppDelegate.m */; };
+		C1C1CFFA15F576C70053040B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1C1CFF615F567AB0053040B /* Security.framework */; };
+		C1C1D00315F576ED0053040B /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C1C1D00215F576ED0053040B /* main.c */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C19E056515F507F100BF5DAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C19E051315F4F72B00BF5DAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C19E055315F5065800BF5DAD;
+			remoteInfo = "BetterFinder-injected";
+		};
+		C1B7753B15F57A6600ACDF06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C19E051315F4F72B00BF5DAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1C1CFFE15F576ED0053040B;
+			remoteInfo = BetterFinderDaemon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C19E053F15F4F76700BF5DAD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C19E054015F4F77800BF5DAD /* mach_inject_bundle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1B7753815F57A4E00ACDF06 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LaunchServices;
+			dstSubfolderSpec = 1;
+			files = (
+				C1B7753A15F57A5F00ACDF06 /* com.dapetcu21.BetterFinderDaemon in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1C1CFFD15F576ED0053040B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C19E051C15F4F72B00BF5DAD /* BetterFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,11 +82,22 @@
 		C19E052815F4F72B00BF5DAD /* BetterFinder-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BetterFinder-Info.plist"; sourceTree = "<group>"; };
 		C19E052A15F4F72B00BF5DAD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C19E052C15F4F72B00BF5DAD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C19E052E15F4F72B00BF5DAD /* BetterFinder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BetterFinder-Prefix.pch"; sourceTree = "<group>"; };
-		C19E053015F4F72B00BF5DAD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		C19E053215F4F72B00BF5DAD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		C19E053315F4F72B00BF5DAD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C19E053615F4F72B00BF5DAD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C19E053D15F4F74F00BF5DAD /* mach_inject_bundle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = mach_inject_bundle.framework; sourceTree = "<group>"; };
+		C19E055415F5065800BF5DAD /* BetterFinder-injected.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BetterFinder-injected.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C19E055815F5065800BF5DAD /* BetterFinder-injected-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BetterFinder-injected-Info.plist"; sourceTree = "<group>"; };
+		C19E055A15F5065800BF5DAD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C19E055C15F5065800BF5DAD /* BetterFinder-injected-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BetterFinder-injected-Prefix.pch"; sourceTree = "<group>"; };
+		C19E056215F507AE00BF5DAD /* BetterFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BetterFinder.h; sourceTree = "<group>"; };
+		C19E056315F507AE00BF5DAD /* BetterFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BetterFinder.m; sourceTree = "<group>"; };
+		C19E057515F528DB00BF5DAD /* Installer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Installer.xib; sourceTree = "<group>"; };
+		C1B7753D15F57C4E00ACDF06 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		C1C1CFEE15F5587B0053040B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C1C1CFEF15F5587B0053040B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C1C1CFF615F567AB0053040B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C1C1CFFF15F576ED0053040B /* com.dapetcu21.BetterFinderDaemon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = com.dapetcu21.BetterFinderDaemon; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1C1D00215F576ED0053040B /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		C1C1D00915F577340053040B /* info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
+		C1C1D00A15F577640053040B /* launchd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = launchd.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,7 +105,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1B7753E15F57C4E00ACDF06 /* ServiceManagement.framework in Frameworks */,
 				C19E052115F4F72B00BF5DAD /* Cocoa.framework in Frameworks */,
+				C19E053E15F4F74F00BF5DAD /* mach_inject_bundle.framework in Frameworks */,
+				C1C1CFFA15F576C70053040B /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C19E055115F5065800BF5DAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C19E055515F5065800BF5DAD /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1C1CFFC15F576ED0053040B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				C19E052615F4F72B00BF5DAD /* BetterFinder */,
+				C19E055615F5065800BF5DAD /* BetterFinder-injected */,
+				C1C1D00115F576ED0053040B /* BetterFinderDaemon */,
 				C19E051F15F4F72B00BF5DAD /* Frameworks */,
 				C19E051D15F4F72B00BF5DAD /* Products */,
 			);
@@ -56,6 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				C19E051C15F4F72B00BF5DAD /* BetterFinder.app */,
+				C19E055415F5065800BF5DAD /* BetterFinder-injected.bundle */,
+				C1C1CFFF15F576ED0053040B /* com.dapetcu21.BetterFinderDaemon */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,9 +173,10 @@
 		C19E052615F4F72B00BF5DAD /* BetterFinder */ = {
 			isa = PBXGroup;
 			children = (
-				C19E053215F4F72B00BF5DAD /* AppDelegate.h */,
-				C19E053315F4F72B00BF5DAD /* AppDelegate.m */,
-				C19E053515F4F72B00BF5DAD /* MainMenu.xib */,
+				C1B7753D15F57C4E00ACDF06 /* ServiceManagement.framework */,
+				C1C1CFF615F567AB0053040B /* Security.framework */,
+				C1C1CFEE15F5587B0053040B /* AppDelegate.h */,
+				C1C1CFEF15F5587B0053040B /* AppDelegate.m */,
 				C19E052715F4F72B00BF5DAD /* Supporting Files */,
 			);
 			path = BetterFinder;
@@ -93,13 +185,59 @@
 		C19E052715F4F72B00BF5DAD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C19E053D15F4F74F00BF5DAD /* mach_inject_bundle.framework */,
 				C19E052815F4F72B00BF5DAD /* BetterFinder-Info.plist */,
 				C19E052915F4F72B00BF5DAD /* InfoPlist.strings */,
-				C19E052C15F4F72B00BF5DAD /* main.m */,
-				C19E052E15F4F72B00BF5DAD /* BetterFinder-Prefix.pch */,
-				C19E052F15F4F72B00BF5DAD /* Credits.rtf */,
+				C19E057715F536CC00BF5DAD /* New Group */,
+				C19E057515F528DB00BF5DAD /* Installer.xib */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C19E055615F5065800BF5DAD /* BetterFinder-injected */ = {
+			isa = PBXGroup;
+			children = (
+				C19E056115F5078F00BF5DAD /* Classes */,
+				C19E055715F5065800BF5DAD /* Supporting Files */,
+			);
+			path = "BetterFinder-injected";
+			sourceTree = "<group>";
+		};
+		C19E055715F5065800BF5DAD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C19E055815F5065800BF5DAD /* BetterFinder-injected-Info.plist */,
+				C19E055915F5065800BF5DAD /* InfoPlist.strings */,
+				C19E055C15F5065800BF5DAD /* BetterFinder-injected-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C19E056115F5078F00BF5DAD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C19E056215F507AE00BF5DAD /* BetterFinder.h */,
+				C19E056315F507AE00BF5DAD /* BetterFinder.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		C19E057715F536CC00BF5DAD /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				C19E052C15F4F72B00BF5DAD /* main.m */,
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		C1C1D00115F576ED0053040B /* BetterFinderDaemon */ = {
+			isa = PBXGroup;
+			children = (
+				C1C1D00A15F577640053040B /* launchd.plist */,
+				C1C1D00915F577340053040B /* info.plist */,
+				C1C1D00215F576ED0053040B /* main.c */,
+			);
+			path = BetterFinderDaemon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,15 +250,53 @@
 				C19E051815F4F72B00BF5DAD /* Sources */,
 				C19E051915F4F72B00BF5DAD /* Frameworks */,
 				C19E051A15F4F72B00BF5DAD /* Resources */,
+				C19E053F15F4F76700BF5DAD /* CopyFiles */,
+				C1B7753815F57A4E00ACDF06 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C1B7753C15F57A6600ACDF06 /* PBXTargetDependency */,
+				C19E056615F507F100BF5DAD /* PBXTargetDependency */,
 			);
 			name = BetterFinder;
 			productName = BetterFinder;
 			productReference = C19E051C15F4F72B00BF5DAD /* BetterFinder.app */;
 			productType = "com.apple.product-type.application";
+		};
+		C19E055315F5065800BF5DAD /* BetterFinder-injected */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C19E055D15F5065800BF5DAD /* Build configuration list for PBXNativeTarget "BetterFinder-injected" */;
+			buildPhases = (
+				C19E055015F5065800BF5DAD /* Sources */,
+				C19E055115F5065800BF5DAD /* Frameworks */,
+				C19E055215F5065800BF5DAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BetterFinder-injected";
+			productName = "BetterFinder-injected";
+			productReference = C19E055415F5065800BF5DAD /* BetterFinder-injected.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		C1C1CFFE15F576ED0053040B /* BetterFinderDaemon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1C1D00615F576ED0053040B /* Build configuration list for PBXNativeTarget "BetterFinderDaemon" */;
+			buildPhases = (
+				C1C1CFFB15F576ED0053040B /* Sources */,
+				C1C1CFFC15F576ED0053040B /* Frameworks */,
+				C1C1CFFD15F576ED0053040B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BetterFinderDaemon;
+			productName = BetterFinderDaemon;
+			productReference = C1C1CFFF15F576ED0053040B /* com.dapetcu21.BetterFinderDaemon */;
+			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
@@ -144,6 +320,8 @@
 			projectRoot = "";
 			targets = (
 				C19E051B15F4F72B00BF5DAD /* BetterFinder */,
+				C19E055315F5065800BF5DAD /* BetterFinder-injected */,
+				C1C1CFFE15F576ED0053040B /* BetterFinderDaemon */,
 			);
 		};
 /* End PBXProject section */
@@ -153,9 +331,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C19E056015F506E900BF5DAD /* BetterFinder-injected.bundle in Resources */,
 				C19E052B15F4F72B00BF5DAD /* InfoPlist.strings in Resources */,
-				C19E053115F4F72B00BF5DAD /* Credits.rtf in Resources */,
-				C19E053715F4F72B00BF5DAD /* MainMenu.xib in Resources */,
+				C19E057615F528DB00BF5DAD /* Installer.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C19E055215F5065800BF5DAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C19E055B15F5065800BF5DAD /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,11 +353,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				C19E052D15F4F72B00BF5DAD /* main.m in Sources */,
-				C19E053415F4F72B00BF5DAD /* AppDelegate.m in Sources */,
+				C1C1CFF015F5587B0053040B /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C19E055015F5065800BF5DAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C19E056415F507AE00BF5DAD /* BetterFinder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1C1CFFB15F576ED0053040B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1C1D00315F576ED0053040B /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C19E056615F507F100BF5DAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C19E055315F5065800BF5DAD /* BetterFinder-injected */;
+			targetProxy = C19E056515F507F100BF5DAD /* PBXContainerItemProxy */;
+		};
+		C1B7753C15F57A6600ACDF06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1C1CFFE15F576ED0053040B /* BetterFinderDaemon */;
+			targetProxy = C1B7753B15F57A6600ACDF06 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C19E052915F4F72B00BF5DAD /* InfoPlist.strings */ = {
@@ -182,20 +397,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		C19E052F15F4F72B00BF5DAD /* Credits.rtf */ = {
+		C19E055915F5065800BF5DAD /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C19E053015F4F72B00BF5DAD /* en */,
+				C19E055A15F5065800BF5DAD /* en */,
 			);
-			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		C19E053515F4F72B00BF5DAD /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C19E053615F4F72B00BF5DAD /* en */,
-			);
-			name = MainMenu.xib;
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -251,11 +458,15 @@
 		C19E053B15F4F72B00BF5DAD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BetterFinder/BetterFinder-Prefix.pch";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/BetterFinder\"",
+				);
 				INFOPLIST_FILE = "BetterFinder/BetterFinder-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -263,12 +474,85 @@
 		C19E053C15F4F72B00BF5DAD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BetterFinder/BetterFinder-Prefix.pch";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/BetterFinder\"",
+				);
 				INFOPLIST_FILE = "BetterFinder/BetterFinder-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C19E055E15F5065800BF5DAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BetterFinder-injected/BetterFinder-injected-Prefix.pch";
+				INFOPLIST_FILE = "BetterFinder-injected/BetterFinder-injected-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		C19E055F15F5065800BF5DAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BetterFinder-injected/BetterFinder-injected-Prefix.pch";
+				INFOPLIST_FILE = "BetterFinder-injected/BetterFinder-injected-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		C1C1D00715F576ED0053040B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				INFOPLIST_FILE = BetterFinderDaemon/info.plist;
+				INFOPLIST_PREPROCESS = YES;
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__info_plist,
+					BetterFinderDaemon/info.plist,
+					"-sectcreate",
+					__TEXT,
+					__launchd_plist,
+					BetterFinderDaemon/launchd.plist,
+				);
+				PRODUCT_NAME = "com.dapetcu21.$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		C1C1D00815F576ED0053040B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				INFOPLIST_FILE = BetterFinderDaemon/info.plist;
+				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = SMJOBBLESS_RELEASE;
+				INFOPLIST_PREPROCESS = YES;
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__info_plist,
+					BetterFinderDaemon/info.plist,
+					"-sectcreate",
+					__TEXT,
+					__launchd_plist,
+					BetterFinderDaemon/launchd.plist,
+				);
+				PRODUCT_NAME = "com.dapetcu21.$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -291,6 +575,25 @@
 				C19E053C15F4F72B00BF5DAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C19E055D15F5065800BF5DAD /* Build configuration list for PBXNativeTarget "BetterFinder-injected" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C19E055E15F5065800BF5DAD /* Debug */,
+				C19E055F15F5065800BF5DAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1C1D00615F576ED0053040B /* Build configuration list for PBXNativeTarget "BetterFinderDaemon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1C1D00715F576ED0053040B /* Debug */,
+				C1C1D00815F576ED0053040B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

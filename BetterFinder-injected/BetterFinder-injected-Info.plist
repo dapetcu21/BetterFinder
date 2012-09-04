@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>en</string>
+	<string>English</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
@@ -15,25 +15,16 @@
 	<key>CFBundleName</key>
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundlePackageType</key>
-	<string>APPL</string>
+	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-	<key>LSMinimumSystemVersion</key>
-	<string>${MACOSX_DEPLOYMENT_TARGET}</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2012 Marius Petcu. All rights reserved.</string>
-	<key>NSMainNibFile</key>
-	<string>Installer</string>
 	<key>NSPrincipalClass</key>
-	<string>NSApplication</string>
-	<key>SMPrivilegedExecutables</key>
-	<dict>
-		<key>com.dapetcu21.BetterFinderDaemon</key>
-		<string>identifier com.dapetcu21.BetterFinderDaemon and certificate leaf[subject.CN] = &quot;Mac Developer&quot;</string>
-	</dict>
+	<string>BetterFinder</string>
 </dict>
 </plist>
