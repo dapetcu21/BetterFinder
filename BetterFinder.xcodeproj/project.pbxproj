@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C192477515F5BD7800FD57BC /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C192477415F5BD7800FD57BC /* main.c */; };
 		C192477E15F5BF0C00FD57BC /* com.dapetcu21.BetterFinderUninstaller in Copy Files (2 items) */ = {isa = PBXBuildFile; fileRef = C192477115F5BD7800FD57BC /* com.dapetcu21.BetterFinderUninstaller */; };
+		C192478A15F5F2C000FD57BC /* BFPrefPaneHooks.m in Sources */ = {isa = PBXBuildFile; fileRef = C192478915F5F2C000FD57BC /* BFPrefPaneHooks.m */; };
 		C19E052115F4F72B00BF5DAD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19E052015F4F72B00BF5DAD /* Cocoa.framework */; };
 		C19E052B15F4F72B00BF5DAD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C19E052915F4F72B00BF5DAD /* InfoPlist.strings */; };
 		C19E052D15F4F72B00BF5DAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C19E052C15F4F72B00BF5DAD /* main.m */; };
@@ -98,6 +99,8 @@
 		C192477415F5BD7800FD57BC /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		C192477C15F5BDA800FD57BC /* info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		C192477D15F5BDA800FD57BC /* launchd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = launchd.plist; sourceTree = "<group>"; };
+		C192478815F5F2C000FD57BC /* BFPrefPaneHooks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFPrefPaneHooks.h; sourceTree = "<group>"; };
+		C192478915F5F2C000FD57BC /* BFPrefPaneHooks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFPrefPaneHooks.m; sourceTree = "<group>"; };
 		C19E051C15F4F72B00BF5DAD /* BetterFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C19E052015F4F72B00BF5DAD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		C19E052315F4F72B00BF5DAD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -106,7 +109,7 @@
 		C19E052815F4F72B00BF5DAD /* BetterFinder-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BetterFinder-Info.plist"; sourceTree = "<group>"; };
 		C19E052A15F4F72B00BF5DAD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C19E052C15F4F72B00BF5DAD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C19E053D15F4F74F00BF5DAD /* mach_inject_bundle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = mach_inject_bundle.framework; sourceTree = "<group>"; };
+		C19E053D15F4F74F00BF5DAD /* mach_inject_bundle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = mach_inject_bundle.framework; path = BetterFinder/mach_inject_bundle.framework; sourceTree = "<group>"; };
 		C19E055415F5065800BF5DAD /* BetterFinder-injected.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BetterFinder-injected.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C19E055815F5065800BF5DAD /* BetterFinder-injected-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BetterFinder-injected-Info.plist"; sourceTree = "<group>"; };
 		C19E055A15F5065800BF5DAD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -175,9 +178,9 @@
 			isa = PBXGroup;
 			children = (
 				C19E052615F4F72B00BF5DAD /* BetterFinder */,
-				C19E055615F5065800BF5DAD /* BetterFinder-injected */,
 				C1C1D00115F576ED0053040B /* BetterFinderDaemon */,
 				C192477315F5BD7800FD57BC /* BetterFinderUninstaller */,
+				C19E055615F5065800BF5DAD /* BetterFinder-injected */,
 				C19E051F15F4F72B00BF5DAD /* Frameworks */,
 				C19E051D15F4F72B00BF5DAD /* Products */,
 			);
@@ -197,6 +200,9 @@
 		C19E051F15F4F72B00BF5DAD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C1B7753D15F57C4E00ACDF06 /* ServiceManagement.framework */,
+				C1C1CFF615F567AB0053040B /* Security.framework */,
+				C19E053D15F4F74F00BF5DAD /* mach_inject_bundle.framework */,
 				C19E052015F4F72B00BF5DAD /* Cocoa.framework */,
 				C19E052215F4F72B00BF5DAD /* Other Frameworks */,
 			);
@@ -216,7 +222,6 @@
 		C19E052615F4F72B00BF5DAD /* BetterFinder */ = {
 			isa = PBXGroup;
 			children = (
-				C19F27D515F58D170016BB3D /* Frameworks */,
 				C19E057715F536CC00BF5DAD /* Sources */,
 				C19E052715F4F72B00BF5DAD /* Supporting Files */,
 			);
@@ -257,6 +262,8 @@
 			children = (
 				C19E056215F507AE00BF5DAD /* BetterFinder.h */,
 				C19E056315F507AE00BF5DAD /* BetterFinder.m */,
+				C192478815F5F2C000FD57BC /* BFPrefPaneHooks.h */,
+				C192478915F5F2C000FD57BC /* BFPrefPaneHooks.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -269,16 +276,6 @@
 				C19E052C15F4F72B00BF5DAD /* main.m */,
 			);
 			name = Sources;
-			sourceTree = "<group>";
-		};
-		C19F27D515F58D170016BB3D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C1B7753D15F57C4E00ACDF06 /* ServiceManagement.framework */,
-				C1C1CFF615F567AB0053040B /* Security.framework */,
-				C19E053D15F4F74F00BF5DAD /* mach_inject_bundle.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		C1C1D00115F576ED0053040B /* BetterFinderDaemon */ = {
@@ -440,6 +437,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C19E056415F507AE00BF5DAD /* BetterFinder.m in Sources */,
+				C192478A15F5F2C000FD57BC /* BFPrefPaneHooks.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

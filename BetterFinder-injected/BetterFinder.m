@@ -7,8 +7,20 @@
 //
 
 #import "BetterFinder.h"
+#import "BFPrefPaneHooks.h"
 
 @implementation BetterFinder
+
+-(void)loadClasses
+{
+    BFGetClass(TPreferencesWindowController);
+}
+
+-(void)injectMethods
+{
+    [self loadClasses];
+    [self injectPrefPane];
+}
 
 -(id)init
 {
@@ -20,6 +32,8 @@
         [conn addRunLoop:[NSRunLoop currentRunLoop]];
         
         NSLog(@"WE ARE IN UR BASE");
+        
+        [self injectMethods];
     }
     return self;
 }
