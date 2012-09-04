@@ -10,6 +10,9 @@
 		C192477515F5BD7800FD57BC /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C192477415F5BD7800FD57BC /* main.c */; };
 		C192477E15F5BF0C00FD57BC /* com.dapetcu21.BetterFinderUninstaller in Copy Files (2 items) */ = {isa = PBXBuildFile; fileRef = C192477115F5BD7800FD57BC /* com.dapetcu21.BetterFinderUninstaller */; };
 		C192478A15F5F2C000FD57BC /* BFPrefPaneHooks.m in Sources */ = {isa = PBXBuildFile; fileRef = C192478915F5F2C000FD57BC /* BFPrefPaneHooks.m */; };
+		C192479015F67B1800FD57BC /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C192478F15F67B1800FD57BC /* icon.png */; };
+		C192479615F6A4E100FD57BC /* BFPrefPane.m in Sources */ = {isa = PBXBuildFile; fileRef = C192479415F6A4E000FD57BC /* BFPrefPane.m */; };
+		C192479715F6A4E100FD57BC /* BFPrefPane.xib in Resources */ = {isa = PBXBuildFile; fileRef = C192479515F6A4E100FD57BC /* BFPrefPane.xib */; };
 		C19E052115F4F72B00BF5DAD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19E052015F4F72B00BF5DAD /* Cocoa.framework */; };
 		C19E052B15F4F72B00BF5DAD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C19E052915F4F72B00BF5DAD /* InfoPlist.strings */; };
 		C19E052D15F4F72B00BF5DAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C19E052C15F4F72B00BF5DAD /* main.m */; };
@@ -101,6 +104,15 @@
 		C192477D15F5BDA800FD57BC /* launchd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = launchd.plist; sourceTree = "<group>"; };
 		C192478815F5F2C000FD57BC /* BFPrefPaneHooks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFPrefPaneHooks.h; sourceTree = "<group>"; };
 		C192478915F5F2C000FD57BC /* BFPrefPaneHooks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFPrefPaneHooks.m; sourceTree = "<group>"; };
+		C192478C15F6282500FD57BC /* TPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPreferencesWindowController.h; sourceTree = "<group>"; };
+		C192478D15F628C700FD57BC /* TScriptableWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TScriptableWindowController.h; sourceTree = "<group>"; };
+		C192478E15F628EA00FD57BC /* TNodeObserverProtocol-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TNodeObserverProtocol-Protocol.h"; sourceTree = "<group>"; };
+		C192478F15F67B1800FD57BC /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		C192479115F6A44800FD57BC /* TViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TViewController.h; sourceTree = "<group>"; };
+		C192479215F6A45D00FD57BC /* TPaneController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPaneController.h; sourceTree = "<group>"; };
+		C192479315F6A4E000FD57BC /* BFPrefPane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFPrefPane.h; sourceTree = "<group>"; };
+		C192479415F6A4E000FD57BC /* BFPrefPane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFPrefPane.m; sourceTree = "<group>"; };
+		C192479515F6A4E100FD57BC /* BFPrefPane.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFPrefPane.xib; sourceTree = "<group>"; };
 		C19E051C15F4F72B00BF5DAD /* BetterFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C19E052015F4F72B00BF5DAD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		C19E052315F4F72B00BF5DAD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -174,6 +186,18 @@
 			path = BetterFinderUninstaller;
 			sourceTree = "<group>";
 		};
+		C192478B15F627DD00FD57BC /* Finder */ = {
+			isa = PBXGroup;
+			children = (
+				C192478E15F628EA00FD57BC /* TNodeObserverProtocol-Protocol.h */,
+				C192478D15F628C700FD57BC /* TScriptableWindowController.h */,
+				C192478C15F6282500FD57BC /* TPreferencesWindowController.h */,
+				C192479115F6A44800FD57BC /* TViewController.h */,
+				C192479215F6A45D00FD57BC /* TPaneController.h */,
+			);
+			path = Finder;
+			sourceTree = "<group>";
+		};
 		C19E051115F4F72B00BF5DAD = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +265,7 @@
 		C19E055615F5065800BF5DAD /* BetterFinder-injected */ = {
 			isa = PBXGroup;
 			children = (
+				C192478B15F627DD00FD57BC /* Finder */,
 				C19E056115F5078F00BF5DAD /* Classes */,
 				C19E055715F5065800BF5DAD /* Supporting Files */,
 			);
@@ -250,6 +275,7 @@
 		C19E055715F5065800BF5DAD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C192478F15F67B1800FD57BC /* icon.png */,
 				C19E055815F5065800BF5DAD /* BetterFinder-injected-Info.plist */,
 				C19E055915F5065800BF5DAD /* InfoPlist.strings */,
 				C19E055C15F5065800BF5DAD /* BetterFinder-injected-Prefix.pch */,
@@ -264,6 +290,9 @@
 				C19E056315F507AE00BF5DAD /* BetterFinder.m */,
 				C192478815F5F2C000FD57BC /* BFPrefPaneHooks.h */,
 				C192478915F5F2C000FD57BC /* BFPrefPaneHooks.m */,
+				C192479315F6A4E000FD57BC /* BFPrefPane.h */,
+				C192479415F6A4E000FD57BC /* BFPrefPane.m */,
+				C192479515F6A4E100FD57BC /* BFPrefPane.xib */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -409,6 +438,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C19E055B15F5065800BF5DAD /* InfoPlist.strings in Resources */,
+				C192479015F67B1800FD57BC /* icon.png in Resources */,
+				C192479715F6A4E100FD57BC /* BFPrefPane.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +469,7 @@
 			files = (
 				C19E056415F507AE00BF5DAD /* BetterFinder.m in Sources */,
 				C192478A15F5F2C000FD57BC /* BFPrefPaneHooks.m in Sources */,
+				C192479615F6A4E100FD57BC /* BFPrefPane.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,7 +568,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -554,7 +586,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -563,7 +594,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;

@@ -12,6 +12,8 @@
 
 
 @implementation AppDelegate
+@synthesize window;
+@synthesize textField;
 
 - (void)dealloc
 {
@@ -50,7 +52,7 @@ int betterfinder_install()
 	
 	OSStatus status = AuthorizationCreate(&authRights, kAuthorizationEmptyEnvironment, flags, &authRef);
 	if (status != errAuthorizationSuccess) {
-		NSLog(@"Failed to create AuthorizationRef, return code %i", status);
+		NSLog(@"Failed to create AuthorizationRef, return code %lld", (long long)status);
 	} else {
 		result = !SMJobBless(kSMDomainSystemLaunchd, (CFStringRef)@"com.dapetcu21.BetterFinderDaemon", authRef, NULL);
 	}
@@ -73,7 +75,7 @@ int betterfinder_uninstall()
 	
 	OSStatus status = AuthorizationCreate(&authRights, kAuthorizationEmptyEnvironment, flags, &authRef);
 	if (status != errAuthorizationSuccess) {
-		NSLog(@"Failed to create AuthorizationRef, return code %i", status);
+		NSLog(@"Failed to create AuthorizationRef, return code %lld", (long long)status);
 	} else {
 		result = !SMJobBless(kSMDomainSystemLaunchd, (CFStringRef)@"com.dapetcu21.BetterFinderUninstaller", authRef, NULL);
 	}

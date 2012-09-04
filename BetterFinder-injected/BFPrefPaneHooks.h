@@ -10,4 +10,8 @@
 
 @interface BetterFinder (BFPrefPaneHooks)
 -(void)injectPrefPane;
+-(void)releasePrefPane;
+-(NSArray*)toolbarOrder;
+-(NSDictionary*)toolbarItems;
+-(BFPrefPane*)prefPane;
 @end

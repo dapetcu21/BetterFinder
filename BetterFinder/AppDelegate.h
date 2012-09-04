@@ -9,6 +9,10 @@
 #import <Cocoa/Cocoa.h>
 
 @interface AppDelegate : NSObject <NSApplicationDelegate, NSWindowDelegate>
+{
+    NSWindow *window;
+    NSTextField *textField;
+}
 
 @property (assign) IBOutlet NSWindow *window;
 @property (assign) IBOutlet NSTextField *textField;
