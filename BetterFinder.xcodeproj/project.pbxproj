@@ -13,6 +13,7 @@
 		C192479015F67B1800FD57BC /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C192478F15F67B1800FD57BC /* icon.png */; };
 		C192479615F6A4E100FD57BC /* BFPrefPane.m in Sources */ = {isa = PBXBuildFile; fileRef = C192479415F6A4E000FD57BC /* BFPrefPane.m */; };
 		C192479715F6A4E100FD57BC /* BFPrefPane.xib in Resources */ = {isa = PBXBuildFile; fileRef = C192479515F6A4E100FD57BC /* BFPrefPane.xib */; };
+		C192479D15F6C5D800FD57BC /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = C192479C15F6C5D800FD57BC /* icon.icns */; };
 		C19E052115F4F72B00BF5DAD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19E052015F4F72B00BF5DAD /* Cocoa.framework */; };
 		C19E052B15F4F72B00BF5DAD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C19E052915F4F72B00BF5DAD /* InfoPlist.strings */; };
 		C19E052D15F4F72B00BF5DAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C19E052C15F4F72B00BF5DAD /* main.m */; };
@@ -107,12 +108,13 @@
 		C192478C15F6282500FD57BC /* TPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPreferencesWindowController.h; sourceTree = "<group>"; };
 		C192478D15F628C700FD57BC /* TScriptableWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TScriptableWindowController.h; sourceTree = "<group>"; };
 		C192478E15F628EA00FD57BC /* TNodeObserverProtocol-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TNodeObserverProtocol-Protocol.h"; sourceTree = "<group>"; };
-		C192478F15F67B1800FD57BC /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		C192478F15F67B1800FD57BC /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = "BetterFinder-injected/icon.png"; sourceTree = SOURCE_ROOT; };
 		C192479115F6A44800FD57BC /* TViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TViewController.h; sourceTree = "<group>"; };
 		C192479215F6A45D00FD57BC /* TPaneController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPaneController.h; sourceTree = "<group>"; };
 		C192479315F6A4E000FD57BC /* BFPrefPane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFPrefPane.h; sourceTree = "<group>"; };
 		C192479415F6A4E000FD57BC /* BFPrefPane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFPrefPane.m; sourceTree = "<group>"; };
 		C192479515F6A4E100FD57BC /* BFPrefPane.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFPrefPane.xib; sourceTree = "<group>"; };
+		C192479C15F6C5D800FD57BC /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		C19E051C15F4F72B00BF5DAD /* BetterFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C19E052015F4F72B00BF5DAD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		C19E052315F4F72B00BF5DAD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -256,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				C19E052815F4F72B00BF5DAD /* BetterFinder-Info.plist */,
+				C192479C15F6C5D800FD57BC /* icon.icns */,
 				C19E052915F4F72B00BF5DAD /* InfoPlist.strings */,
 				C19E057515F528DB00BF5DAD /* Installer.xib */,
 			);
@@ -430,6 +433,7 @@
 				C19E056015F506E900BF5DAD /* BetterFinder-injected.bundle in Resources */,
 				C19E052B15F4F72B00BF5DAD /* InfoPlist.strings in Resources */,
 				C19E057615F528DB00BF5DAD /* Installer.xib in Resources */,
+				C192479D15F6C5D800FD57BC /* icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

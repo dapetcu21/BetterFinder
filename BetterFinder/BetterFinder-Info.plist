@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
-	<string></string>
+	<string>icon</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.dapetcu21.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -33,9 +33,9 @@
 	<key>SMPrivilegedExecutables</key>
 	<dict>
 		<key>com.dapetcu21.BetterFinderDaemon</key>
-		<string>identifier com.dapetcu21.BetterFinderDaemon and certificate leaf[subject.CN] = &quot;Mac Developer&quot;</string>
+		<string>identifier com.dapetcu21.BetterFinderDaemon and certificate leaf[subject.CN] = "Mac Developer"</string>
 		<key>com.dapetcu21.BetterFinderUninstaller</key>
-		<string>identifier com.dapetcu21.BetterFinderUninstaller and certificate leaf[subject.CN] = &quot;Mac Developer&quot;</string>
+		<string>identifier com.dapetcu21.BetterFinderUninstaller and certificate leaf[subject.CN] = "Mac Developer"</string>
 	</dict>
 </dict>
 </plist>
