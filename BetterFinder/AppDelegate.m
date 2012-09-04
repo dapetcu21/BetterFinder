@@ -75,7 +75,7 @@ int betterfinder_uninstall()
 	if (status != errAuthorizationSuccess) {
 		NSLog(@"Failed to create AuthorizationRef, return code %i", status);
 	} else {
-		result = !SMJobRemove(kSMDomainSystemLaunchd, (CFStringRef)@"com.dapetcu21.BetterFinderDaemon", authRef, 1, NULL);
+		result = !SMJobBless(kSMDomainSystemLaunchd, (CFStringRef)@"com.dapetcu21.BetterFinderUninstaller", authRef, NULL);
 	}
     
 	return result;

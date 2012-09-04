@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C192477515F5BD7800FD57BC /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C192477415F5BD7800FD57BC /* main.c */; };
+		C192477E15F5BF0C00FD57BC /* com.dapetcu21.BetterFinderUninstaller in Copy Files (2 items) */ = {isa = PBXBuildFile; fileRef = C192477115F5BD7800FD57BC /* com.dapetcu21.BetterFinderUninstaller */; };
 		C19E052115F4F72B00BF5DAD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19E052015F4F72B00BF5DAD /* Cocoa.framework */; };
 		C19E052B15F4F72B00BF5DAD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C19E052915F4F72B00BF5DAD /* InfoPlist.strings */; };
 		C19E052D15F4F72B00BF5DAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C19E052C15F4F72B00BF5DAD /* main.m */; };
@@ -17,7 +19,7 @@
 		C19E056015F506E900BF5DAD /* BetterFinder-injected.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C19E055415F5065800BF5DAD /* BetterFinder-injected.bundle */; };
 		C19E056415F507AE00BF5DAD /* BetterFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = C19E056315F507AE00BF5DAD /* BetterFinder.m */; };
 		C19E057615F528DB00BF5DAD /* Installer.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19E057515F528DB00BF5DAD /* Installer.xib */; };
-		C1B7753A15F57A5F00ACDF06 /* com.dapetcu21.BetterFinderDaemon in CopyFiles */ = {isa = PBXBuildFile; fileRef = C1C1CFFF15F576ED0053040B /* com.dapetcu21.BetterFinderDaemon */; };
+		C1B7753A15F57A5F00ACDF06 /* com.dapetcu21.BetterFinderDaemon in Copy Files (2 items) */ = {isa = PBXBuildFile; fileRef = C1C1CFFF15F576ED0053040B /* com.dapetcu21.BetterFinderDaemon */; };
 		C1B7753E15F57C4E00ACDF06 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1B7753D15F57C4E00ACDF06 /* ServiceManagement.framework */; };
 		C1C1CFF015F5587B0053040B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C1C1CFEF15F5587B0053040B /* AppDelegate.m */; };
 		C1C1CFFA15F576C70053040B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1C1CFF615F567AB0053040B /* Security.framework */; };
@@ -25,6 +27,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C192477F15F5BF2500FD57BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C19E051315F4F72B00BF5DAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C192477015F5BD7800FD57BC;
+			remoteInfo = BetterFinderUninstaller;
+		};
 		C19E056515F507F100BF5DAD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C19E051315F4F72B00BF5DAD /* Project object */;
@@ -42,6 +51,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		C192476F15F5BD7800FD57BC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		C19E053F15F4F76700BF5DAD /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -52,14 +70,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C1B7753815F57A4E00ACDF06 /* CopyFiles */ = {
+		C1B7753815F57A4E00ACDF06 /* Copy Files (2 items) */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = Contents/Library/LaunchServices;
 			dstSubfolderSpec = 1;
 			files = (
-				C1B7753A15F57A5F00ACDF06 /* com.dapetcu21.BetterFinderDaemon in CopyFiles */,
+				C192477E15F5BF0C00FD57BC /* com.dapetcu21.BetterFinderUninstaller in Copy Files (2 items) */,
+				C1B7753A15F57A5F00ACDF06 /* com.dapetcu21.BetterFinderDaemon in Copy Files (2 items) */,
 			);
+			name = "Copy Files (2 items)";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C1C1CFFD15F576ED0053040B /* CopyFiles */ = {
@@ -74,6 +94,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C192477115F5BD7800FD57BC /* com.dapetcu21.BetterFinderUninstaller */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = com.dapetcu21.BetterFinderUninstaller; sourceTree = BUILT_PRODUCTS_DIR; };
+		C192477415F5BD7800FD57BC /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		C192477C15F5BDA800FD57BC /* info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
+		C192477D15F5BDA800FD57BC /* launchd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = launchd.plist; sourceTree = "<group>"; };
 		C19E051C15F4F72B00BF5DAD /* BetterFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C19E052015F4F72B00BF5DAD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		C19E052315F4F72B00BF5DAD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -101,6 +125,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C192476E15F5BD7800FD57BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C19E051915F4F72B00BF5DAD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -130,12 +161,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C192477315F5BD7800FD57BC /* BetterFinderUninstaller */ = {
+			isa = PBXGroup;
+			children = (
+				C192477C15F5BDA800FD57BC /* info.plist */,
+				C192477D15F5BDA800FD57BC /* launchd.plist */,
+				C192477415F5BD7800FD57BC /* main.c */,
+			);
+			path = BetterFinderUninstaller;
+			sourceTree = "<group>";
+		};
 		C19E051115F4F72B00BF5DAD = {
 			isa = PBXGroup;
 			children = (
 				C19E052615F4F72B00BF5DAD /* BetterFinder */,
 				C19E055615F5065800BF5DAD /* BetterFinder-injected */,
 				C1C1D00115F576ED0053040B /* BetterFinderDaemon */,
+				C192477315F5BD7800FD57BC /* BetterFinderUninstaller */,
 				C19E051F15F4F72B00BF5DAD /* Frameworks */,
 				C19E051D15F4F72B00BF5DAD /* Products */,
 			);
@@ -147,6 +189,7 @@
 				C19E051C15F4F72B00BF5DAD /* BetterFinder.app */,
 				C19E055415F5065800BF5DAD /* BetterFinder-injected.bundle */,
 				C1C1CFFF15F576ED0053040B /* com.dapetcu21.BetterFinderDaemon */,
+				C192477115F5BD7800FD57BC /* com.dapetcu21.BetterFinderUninstaller */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -251,6 +294,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C192477015F5BD7800FD57BC /* BetterFinderUninstaller */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C192477A15F5BD7800FD57BC /* Build configuration list for PBXNativeTarget "BetterFinderUninstaller" */;
+			buildPhases = (
+				C192476D15F5BD7800FD57BC /* Sources */,
+				C192476E15F5BD7800FD57BC /* Frameworks */,
+				C192476F15F5BD7800FD57BC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BetterFinderUninstaller;
+			productName = BetterFinderUninstaller;
+			productReference = C192477115F5BD7800FD57BC /* com.dapetcu21.BetterFinderUninstaller */;
+			productType = "com.apple.product-type.tool";
+		};
 		C19E051B15F4F72B00BF5DAD /* BetterFinder */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C19E053A15F4F72B00BF5DAD /* Build configuration list for PBXNativeTarget "BetterFinder" */;
@@ -259,11 +319,12 @@
 				C19E051915F4F72B00BF5DAD /* Frameworks */,
 				C19E051A15F4F72B00BF5DAD /* Resources */,
 				C19E053F15F4F76700BF5DAD /* CopyFiles */,
-				C1B7753815F57A4E00ACDF06 /* CopyFiles */,
+				C1B7753815F57A4E00ACDF06 /* Copy Files (2 items) */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C192478015F5BF2500FD57BC /* PBXTargetDependency */,
 				C1B7753C15F57A6600ACDF06 /* PBXTargetDependency */,
 				C19E056615F507F100BF5DAD /* PBXTargetDependency */,
 			);
@@ -330,6 +391,7 @@
 				C19E051B15F4F72B00BF5DAD /* BetterFinder */,
 				C19E055315F5065800BF5DAD /* BetterFinder-injected */,
 				C1C1CFFE15F576ED0053040B /* BetterFinderDaemon */,
+				C192477015F5BD7800FD57BC /* BetterFinderUninstaller */,
 			);
 		};
 /* End PBXProject section */
@@ -356,6 +418,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C192476D15F5BD7800FD57BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C192477515F5BD7800FD57BC /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C19E051815F4F72B00BF5DAD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -384,6 +454,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C192478015F5BF2500FD57BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C192477015F5BD7800FD57BC /* BetterFinderUninstaller */;
+			targetProxy = C192477F15F5BF2500FD57BC /* PBXContainerItemProxy */;
+		};
 		C19E056615F507F100BF5DAD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C19E055315F5065800BF5DAD /* BetterFinder-injected */;
@@ -416,11 +491,54 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C192477815F5BD7800FD57BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				INFOPLIST_FILE = BetterFinderUninstaller/info.plist;
+				INFOPLIST_PREPROCESS = YES;
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__info_plist,
+					BetterFinderUninstaller/info.plist,
+					"-sectcreate",
+					__TEXT,
+					__launchd_plist,
+					BetterFinderUninstaller/launchd.plist,
+				);
+				PRODUCT_NAME = "com.dapetcu21.$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		C192477915F5BD7800FD57BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				INFOPLIST_FILE = BetterFinderUninstaller/info.plist;
+				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = SMJOBBLESS_RELEASE;
+				INFOPLIST_PREPROCESS = YES;
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__info_plist,
+					BetterFinderUninstaller/info.plist,
+					"-sectcreate",
+					__TEXT,
+					__launchd_plist,
+					BetterFinderUninstaller/launchd.plist,
+				);
+				PRODUCT_NAME = "com.dapetcu21.$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
 		C19E053815F4F72B00BF5DAD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -447,7 +565,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
@@ -567,6 +685,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C192477A15F5BD7800FD57BC /* Build configuration list for PBXNativeTarget "BetterFinderUninstaller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C192477815F5BD7800FD57BC /* Debug */,
+				C192477915F5BD7800FD57BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		C19E051615F4F72B00BF5DAD /* Build configuration list for PBXProject "BetterFinder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
