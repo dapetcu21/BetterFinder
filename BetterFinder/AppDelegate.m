@@ -24,8 +24,8 @@
     {
         [self.textField setStringValue:@"Oops. BetterFinder seems to be installed but the daemon is not running. Reinstalling won't hurt"];
         NSRect r = self.window.frame;
-        r.origin.y += (r.size.height - 130)/2;
-        r.size.height = 130;
+        r.origin.y += (r.size.height - 110)/2;
+        r.size.height = 110;
         [self.window setFrame:r display:YES animate:NO];
     }
     [self.window setDelegate:self];
@@ -83,10 +83,12 @@ int betterfinder_uninstall()
 
 -(IBAction)install:(id)sender
 {
-    betterfinder_install();
-    sleep(2);
-    injector_client();
-    [NSApp terminate:self];
+    if (!betterfinder_install())
+    {
+        sleep(2);
+        injector_client();
+        [NSApp terminate:self];
+    }
 }
 
 @end

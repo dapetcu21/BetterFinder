@@ -103,20 +103,22 @@ int injector_installed()
 
 int main(int argc, char *argv[])
 {
-    if ((argc > 1) &&(!strcmp(argv[1], "daemon")))
-            return injector_daemon();
-    if ((argc > 1) &&(!strcmp(argv[1], "uninstall")))
-    {
-        if (!betterfinder_uninstall())
+    @autoreleasepool {
+        if ((argc > 1) &&(!strcmp(argv[1], "daemon")))
+                return injector_daemon();
+        if ((argc > 1) &&(!strcmp(argv[1], "uninstall")))
         {
-            pid_t pid = finder_pid(getuid());
-            if (pid>0)
-                kill(pid, SIGKILL);
-            return 0;
+            if (!betterfinder_uninstall())
+            {
+                pid_t pid = finder_pid(getuid());
+                if (pid>0)
+                    kill(pid, SIGKILL);
+                return 0;
+            }
+            return 1;
         }
-        return 1;
+        if (!injector_installed())
+            return NSApplicationMain(argc, (const char**)argv);
+        return injector_client();
     }
-    if (!injector_installed())
-        return NSApplicationMain(argc, (const char**)argv);
-    return injector_client();
 }
