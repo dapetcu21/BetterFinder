@@ -22,4 +22,6 @@
     //mine
 }
 
+-(IBAction)uninstall:(id)sender;
+
 @end

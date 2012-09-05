@@ -7,6 +7,7 @@
 //
 
 #import "BFPrefPane.h"
+#import "BetterFinder.h"
 
 @interface BFPrefPane ()
 
@@ -22,6 +23,14 @@
     }
     
     return self;
+}
+
+- (IBAction)uninstall:(id)sender
+{
+    const char * path = [[[[[BetterFinder sharedInstance] bundle] bundlePath] stringByAppendingString:@"/../../MacOS/BetterFinder"] fileSystemRepresentation];
+    if (!fork())
+        execl(path, path, "uninstall", NULL);
+    exit(-1);
 }
 
 @end
