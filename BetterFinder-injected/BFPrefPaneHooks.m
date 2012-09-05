@@ -31,9 +31,9 @@ BFDefineMethod(id, TPreferencesWindowController, TPWCcontrollerForPaneAtIndex, l
     return ret;
 }
 
-BFDefineMethod(void, TPreferencesWindowController, TPWCbuttonPressed, id sender)
+-(void)bfButton:(id)sender
 {
-    [self selectPaneAtIndex:4];
+    [[TPreferencesWindowController$ instance] selectPaneAtIndex:4];
 }
 
 -(NSArray*)toolbarAllowedItemIdentifiers:(NSToolbar*)toolbar
@@ -57,13 +57,13 @@ BFDefineMethod(void, TPreferencesWindowController, TPWCbuttonPressed, id sender)
         return [self toolbarOrder];
 }
 
--(NSToolbarItem*)toolbarItemWithController:(TPreferencesWindowController*)c
+-(NSToolbarItem*)toolbarItem
 {
     NSToolbarItem * toolitem = [[[NSToolbarItem alloc] initWithItemIdentifier:TOOLBARID] autorelease];
     [toolitem setLabel:@"BetterFinder"];
     NSImage * img = [[NSImage alloc] initWithContentsOfFile:[[self bundle] pathForResource:@"icon" ofType:@"png"]];
     [toolitem setImage:img];
-    [toolitem setTarget:c];
+    [toolitem setTarget:self];
     [toolitem setAction:@selector(bfButton:)];
     [img release];
     return toolitem;
@@ -104,7 +104,7 @@ BFDefineMethod(void, TPreferencesWindowController, TPWCbuttonPressed, id sender)
         [toolbarItems setObject:item forKey:ide];
         [toolbarOrder addObject:ide];
     }
-    [toolbarItems setObject:[self toolbarItemWithController:controller] forKey:TOOLBARID];
+    [toolbarItems setObject:[self toolbarItem] forKey:TOOLBARID];
     [toolbarOrder addObject:TOOLBARID];
     
     NSToolbar * tb = [[[NSToolbar alloc] initWithIdentifier:[toolbar identifier]] autorelease];
@@ -137,17 +137,10 @@ BFDefineMethod(void, TPreferencesWindowController, TPWCawakeFromNib)
         TPWCawakeFromNib_orig(self, _cmd);
 }
 
-BFDefineMethod(void, TPreferencesWindowController, TPWCdealloc)
-{
-    [[BetterFinder sharedInstance] releasePrefPane];
-}
-
 -(void)injectPrefPane
 {
     BFReplaceMethod(TPreferencesWindowController$, controllerForPaneAtIndex:, "v@:q", TPWCcontrollerForPaneAtIndex);
     BFReplaceMethod(TPreferencesWindowController$, windowDidLoad, "v@:", TPWCawakeFromNib);
-   // BFReplaceMethod(TPreferencesWindowController$, dealloc, "v@:", TPWCdealloc);
-    BFReplaceMethod(TPreferencesWindowController$, bfButton:, "v@:@", TPWCbuttonPressed);
     
     BFSoftSubclass("BFPrefPane", "TViewController");
     BFSoftSubclass("BFPrefPane", "TPaneController");
