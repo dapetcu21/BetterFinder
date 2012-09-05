@@ -11,6 +11,17 @@
 #import "Finder/TPreferencesWindowController.h"
 #define TOOLBARID @"com.dapetcu21.BetterFinderPrefs"
 
+@interface BFToolbarItem : NSToolbarItem //Ugly hack but works best
+@end
+@implementation BFToolbarItem
+-(void)setImage:(NSImage*)img
+{
+    if (img)
+        img = [[BetterFinder sharedInstance] toolbarItemImage];
+    [super setImage:img];
+}
+@end
+
 @implementation BetterFinder (BFPrefPaneHooks)
 
 -(BFPrefPane*)prefPane
@@ -49,7 +60,6 @@ BFDefineMethod(id, TPreferencesWindowController, TPWCcontrollerForPaneAtIndex, l
 
 -(NSArray*)toolbarSelectableItemIdentifiers:(NSToolbar*)toolbar
 {
-    NSLog(@"selectable");
     TPreferencesWindowController *c = [TPreferencesWindowController$ instance];
     if ([c respondsToSelector:@selector(toolbarSelectableItemIdentifiers:)])
         return [[c toolbarSelectableItemIdentifiers:toolbar] arrayByAddingObject:TOOLBARID];
@@ -59,15 +69,24 @@ BFDefineMethod(id, TPreferencesWindowController, TPWCcontrollerForPaneAtIndex, l
 
 -(NSToolbarItem*)toolbarItem
 {
-    NSToolbarItem * toolitem = [[[NSToolbarItem alloc] initWithItemIdentifier:TOOLBARID] autorelease];
-    [toolitem setLabel:@"BetterFinder"];
-    NSImage * img = [[NSImage alloc] initWithContentsOfFile:[[self bundle] pathForResource:@"icon" ofType:@"png"]];
-    [toolitem setImage:img];
-    [toolitem setTarget:self];
-    [toolitem setAction:@selector(bfButton:)];
-    [img release];
-    return toolitem;
+    if (!toolItem)
+    {
+        toolItem = [[BFToolbarItem alloc] initWithItemIdentifier:TOOLBARID];
+        [toolItem setLabel:@"BetterFinder"];
+        [toolItem setImage:[self toolbarItemImage]];
+        [toolItem setTarget:self];
+        [toolItem setAction:@selector(bfButton:)];
+    }
+    return toolItem;
 }
+
+-(NSImage*)toolbarItemImage
+{
+    if (!toolItemImage)
+        toolItemImage = [[NSImage alloc] initWithContentsOfFile:[[self bundle] pathForResource:@"icon" ofType:@"png"]];
+    return toolItemImage;
+}
+
 
 -(NSToolbarItem*)toolbar:(NSToolbar *)toolbar itemForItemIdentifier:(NSString *)itemID willBeInsertedIntoToolbar:(BOOL)willBeInserted
 {
@@ -92,7 +111,6 @@ BFDefineMethod(id, TPreferencesWindowController, TPWCcontrollerForPaneAtIndex, l
     
     if (!toolbar) return;
     
-    NSLog(@"reconfigured");
     NSArray * items = toolbar.items;
     [toolbarItems release];
     toolbarItems = [[NSMutableDictionary alloc] initWithCapacity:[items count]+1];
@@ -107,15 +125,13 @@ BFDefineMethod(id, TPreferencesWindowController, TPWCcontrollerForPaneAtIndex, l
     [toolbarItems setObject:[self toolbarItem] forKey:TOOLBARID];
     [toolbarOrder addObject:TOOLBARID];
     
+    
     NSToolbar * tb = [[[NSToolbar alloc] initWithIdentifier:[toolbar identifier]] autorelease];
     [tb setDisplayMode:toolbar.displayMode];
     [tb setSizeMode:toolbar.sizeMode];
     [tb setAllowsUserCustomization:toolbar.allowsUserCustomization];
     [tb setAutosavesConfiguration:toolbar.autosavesConfiguration];
     [tb setShowsBaselineSeparator:toolbar.showsBaselineSeparator];
-    NSUInteger ix = [toolbarOrder indexOfObject:[toolbar selectedItemIdentifier]];
-    if (ix == NSNotFound)
-        ix = 0;
     
     (*_toolbar) = toolbar = tb;
     [[controller window] setToolbar:toolbar];
@@ -127,11 +143,11 @@ BFDefineMethod(id, TPreferencesWindowController, TPWCcontrollerForPaneAtIndex, l
         [toolbar insertItemWithItemIdentifier:str atIndex:i++];
     
     [[[controller window] contentView] addSubview:[[self prefPane] view]];
+    
 }
 
 BFDefineMethod(void, TPreferencesWindowController, TPWCawakeFromNib)
 {
-    NSLog(@"awakeFromNib");
     [[BetterFinder sharedInstance] reconfigureToolbarInController:self];
     if (TPWCawakeFromNib_orig)
         TPWCawakeFromNib_orig(self, _cmd);
@@ -150,11 +166,14 @@ BFDefineMethod(void, TPreferencesWindowController, TPWCawakeFromNib)
 
 -(void)releasePrefPane
 {
-    NSLog(@"release");
     [toolbarItems release];
     toolbarItems = nil;
     [toolbarOrder release];
     toolbarOrder = nil;
+    [toolItem release];
+    toolItem = nil;
+    [toolItemImage release];
+    toolItemImage = nil;
     [pane release];
     pane = nil;
 }

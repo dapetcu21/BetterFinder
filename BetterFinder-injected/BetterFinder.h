@@ -18,6 +18,8 @@
     
     Class TPreferencesWindowController$;
     
+    NSToolbarItem * toolItem;
+    NSImage * toolItemImage;
     NSMutableDictionary * toolbarItems;
     NSMutableArray * toolbarOrder;
     

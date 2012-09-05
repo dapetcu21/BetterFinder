@@ -14,4 +14,7 @@
 -(NSArray*)toolbarOrder;
 -(NSDictionary*)toolbarItems;
 -(BFPrefPane*)prefPane;
+
+-(NSToolbarItem*)toolbarItem;
+-(NSImage*)toolbarItemImage;
 @end
