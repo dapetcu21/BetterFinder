@@ -15,21 +15,19 @@
 
 @implementation BFPrefPane
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Initialization code here.
-    }
-    
-    return self;
-}
-
 - (IBAction)uninstall:(id)sender
 {
     const char * path = [[[[[BetterFinder sharedInstance] bundle] bundlePath] stringByAppendingString:@"/../../MacOS/BetterFinder"] fileSystemRepresentation];
+
     if (!fork())
+    {
         execl(path, path, "uninstall", NULL);
+        NSLog(@"execl: %s", strerror(errno));
+    }
+}
+
+- (IBAction)restart:(id)sender
+{
     exit(-1);
 }
 

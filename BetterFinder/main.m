@@ -114,8 +114,19 @@ int main(int argc, char *argv[])
                 if (pid>0)
                     kill(pid, SIGKILL);
                 return 0;
+            } else {
+                NSLog(@"Can't start uninstaller");
+                return 1;
             }
-            return 1;
+        }
+        if ((argc > 1) &&(!strcmp(argv[1], "uninstall-norestart")))
+        {
+            if (betterfinder_uninstall())
+            {
+                NSLog(@"Can't start uninstaller");
+                return 1;
+            }
+            return 0;
         }
         if (!injector_installed())
             return NSApplicationMain(argc, (const char**)argv);

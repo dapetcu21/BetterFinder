@@ -22,6 +22,7 @@
     //mine
 }
 
--(IBAction)uninstall:(id)sender;
+- (IBAction)uninstall:(id)sender;
+- (IBAction)restart:(id)sender;
 
 @end
